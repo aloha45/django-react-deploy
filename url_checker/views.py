@@ -6,7 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 @csrf_exempt
-def check_url(rquest):
+def check_url(request):
   try: 
     url_status = urllib.request.urlopen(request.body.decode("utf-8")).getcode()
   except:
